@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target":  "ESNext",
+        "module":  "CommonJS",
+        "sourceMap": true,
+        "outDir": "./build",
+        "strict": true,
+        "baseUrl": "src",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true,
+        "noUnusedLocals": true
+    }
+}
