@@ -21,7 +21,7 @@ server.get('/', (req, res) => {
     res.send('Hello there!')
 })
 
-server.listen(env.port, (err, addr) => {
+server.listen(env.port, env.address, (err, addr) => {
     if (err) {
         server.log.error(err)
         process.exit(0)

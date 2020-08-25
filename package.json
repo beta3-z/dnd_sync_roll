@@ -6,7 +6,7 @@
   "author": "MaximEmelyanchenko <beta3-z@mail.ru>",
   "license": "MIT",
   "scripts": {
-    "start": "pm2-runtime build/index.js --max-memory-restart 100M",
+    "start": "node build/index.js",
     "build": "tsc",
     "watch": "nodemon -e \"ts\" --ignore build --exec \"tsc && node ./build/index.js\""
   },

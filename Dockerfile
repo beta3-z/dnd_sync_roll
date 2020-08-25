@@ -6,17 +6,18 @@ RUN mkdir /app /app/src
 WORKDIR /app
 
 COPY package.json tsconfig.json ./
-COPY src ./src
 
-RUN yarn global add pm2 && \
-    yarn install && \
-    yarn build && \
+RUN yarn install --production && \
     chown -R node /app
 
 FROM BASE
 ARG PORT
+ARG ADDRESS
 ENV NODE_PATH="/app/build"
-
 USER node
+
+COPY src ./src
+
+RUN yarn build
 
 CMD yarn start
