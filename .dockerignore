@@ -1,0 +1,6 @@
+# disallow any files and folders
+**
+# except
+!package.json
+!tsconfig.json
+!src/
